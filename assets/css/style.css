@@ -1,0 +1,30 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #0099ff;
+}
+
+.container {
+    background-color: #f9f9f9
+}
+
+.dropdown {
+    background-color: #FFF;
+    border-radius: 20px;
+    margin: 5px 0px 5px 0px;
+}
+
+.dropdown .btn-group,
+.dropdown a {
+    width: 100%;
+}
+
+
+/* .card {
+    margin: 5px;
+    width: 23%;
+} */
