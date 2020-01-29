@@ -2,7 +2,7 @@
 class homeController extends controller {
     
     public function index(){
-        $product = new product();
+        $product = new products();
 
         $data = array(
             "products" => $product->getProducts()
