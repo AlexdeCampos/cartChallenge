@@ -4,10 +4,15 @@ class homeController extends controller {
     public function index(){
         $product = new products();
 
-        $data = array(
-            "products" => $product->getProducts()
-        );
+        $products = array();
 
+        foreach($product->getProducts() as $list){
+            $products[$list['sku']] = $list;
+        }
+
+        $data = array(
+            "products" => $products
+        );
         $this->loadView('home',$data);
     }
 }

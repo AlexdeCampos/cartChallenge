@@ -4,27 +4,58 @@ body {
     width: 100%;
 }
 
+
 .navbar {
     background-color: #0099ff;
 }
 
 .container {
-    background-color: #f9f9f9
+    background-color: #f9f9f9;
+    margin-top: 10px;
 }
 
 .dropdown {
-    background-color: #FFF;
-    border-radius: 20px;
-    margin: 5px 0px 5px 0px;
-}
-
-.dropdown .btn-group,
-.dropdown a {
     width: 100%;
+    max-width: 350px;
+    margin: 5px 5px 5px 0px;
 }
 
+.dropdown .btn-group{
+    border-radius: 20px;
+    background-color: #FFF;
+    width:50%;
+}
 
-/* .card {
-    margin: 5px;
-    width: 23%;
-} */
+.menu{
+    width: 350px;
+}
+
+.tile{
+    background-color: #e6e6e6;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px
+}
+
+.icon,
+.modal-overlay{
+    cursor: pointer;
+}
+
+.btn{
+    background: #0099ff;
+    border-color: #0099ff;
+    color : #f1f1fc;
+}
+
+.btn:hover{
+    background: #f1f1fc;
+    border-color: #0099ff;
+    color:#0099ff;
+    text-decoration: none;
+}
+
+.card-image,
+.product-image{
+    margin: auto;
+}

@@ -1,8 +1,11 @@
 <?php
 class ajaxController extends controller {
 
-    public function addToCart($sku = '3000045587',$qty = 1)
+    public function addToCart()
     {
+        $sku = $_POST['sku'];
+        $qty = $_POST['qty'];
+
         $products = new products();
         $productDetail = $products->getProduct($sku);
 
@@ -22,14 +25,17 @@ class ajaxController extends controller {
                 "qty" => 0
             );
             
+            echo "Adicionou: $sku";
             $_SESSION["cart"]["itens"][$sku] = $detail;
         }
         $_SESSION["cart"]["itens"][$sku]["qty"] += $qty;
         $_SESSION["cart"]['total'] += $productDetail["price"] * $qty;
     }
 
-    public function removeToCart($sku)
+    public function removeToCart()
     {
+        $sku = $_POST['sku'];
+
         $itemPrice = $_SESSION["cart"]["itens"][$sku]["price"];
         $itemQty = $_SESSION["cart"]["itens"][$sku]["qty"];
         unset($_SESSION["cart"]["itens"][$sku]);
@@ -44,6 +50,4 @@ class ajaxController extends controller {
             "total" => 0.00
         );
     }
-
-    
 }
