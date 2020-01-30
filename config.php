@@ -4,13 +4,11 @@ global $db;
 $config = array();
 
 if(ENVIRONMENT == 'development'){
-    define("BASE_URL","http://localhost/cartChallenge/");
     $config["dbname"] = 'cartchallenge';
     $config["host"] = 'localhost';
     $config["dbuser"] = 'root';
     $config["dbpass"] = '';
 }else{
-    define("BASE_URL","{{BASE_URL}}");
     $config["dbname"] = '{{dbname}}';
     $config["host"] = '{{host}}';
     $config["dbuser"] = '{{dbuser}}';
